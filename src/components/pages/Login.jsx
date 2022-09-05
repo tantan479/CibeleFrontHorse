@@ -7,14 +7,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from 'react-bootstrap/esm/Container'
 import Button from 'react-bootstrap/Button'
 import './login.css'
-import React, { Component } from "react";
+import React, { Component } from "react"
 import * as data from '../../data/db.json'
+import Dashboard from './Dashboard'
+import ReactDOM from 'react-dom/client'
 
 const obj1 = data.usuarios
 
-console.log(typeof(obj1[0]['usuario']))
-
 class Login extends Component {
+
+    componentDidMount() {
+        document.title = "Login"
+    }
 
     constructor() {
         super();
@@ -29,10 +33,6 @@ class Login extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-    }
-
-    onSubmitForm() {
-        console.log(this.state['usuario'])
     }
 
     verificar_senha() {
@@ -52,7 +52,8 @@ class Login extends Component {
 
         if (a == 1) {
             if (this.state['senha'] == obj1[p1]['senha'] & this.state['professor'] == obj1[p1]['categoria']) {
-                alert("Usuario logado, dashboard em breve")
+                ReactDOM.createRoot(document.getElementById('root')).render(
+                    <React.StrictMode><Dashboard/></React.StrictMode>)
             } else {
                 alert("Senha ou tipo de usuario incorretos")
 
@@ -66,7 +67,7 @@ class Login extends Component {
                 <Header />
                 <br />
                 <br />
-                <Container class="container">
+                <Container class="log">
                     <br />
                     <h2 class="titulo">Fazer Login</h2>
                     <Form>
