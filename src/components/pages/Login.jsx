@@ -58,10 +58,10 @@ class Login extends Component {
 
     render() {
         return (
+            
             <div className="App" style={{backgroundImage: `url("https://i.imgur.com/uHXWgqG.jpeg")`}}>
 
                 <>
-                
                     <Header />
                     <br />
                     <br />

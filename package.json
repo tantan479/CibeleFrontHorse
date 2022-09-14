@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react": "^18.0.20",
     "bootstrap": "^5.2.0",
     "cdbreact": "^1.5.3",
+    "html-react-parser": "^3.0.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
@@ -19,7 +21,6 @@
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-syntax-import-assertions": "^7.18.6",
-    "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "vite": "^3.0.0"

@@ -14,33 +14,19 @@ class Dashboard extends Component {
         document.title = "Dashboard"
     }
 
-    funcao(condition) {
-        return <h1>teste</h1>
-    }
     render() {
         return (
-            <div className="App">
+            <>
+                <h1>
+                    Dashboard
+                </h1>
+                <hr style={{ width: "45vw" }}></hr>
+                <h4>
+                    Dados de Uso
+                </h4>
 
-                <>
-                    <Header />
-                    <aside>
-                        <Sidebar/>
-                        <main>
-                            <h1>
-                                Dashboard
-                            </h1>
-                            <p>{this.funcao}</p>
-                            <hr style={{width:"45vw"}}></hr>
-                            <h4>
-                                Dados de Uso    
-                            </h4> 
-                        </main> 
-                    </aside>          
-                    <Footer />
-                </>
-            </div>
+            </>
         );
-
     }
 }
 

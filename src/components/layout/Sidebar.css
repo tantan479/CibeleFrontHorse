@@ -6,10 +6,12 @@
     display: flex!important;
     flex-direction:column!important;
     height: calc(100vh - 107px)!important;
-    justify-content: center!important;
-    text-align: center!important;
+    justify-content: left!important;
+    text-align: left!important;
+    padding-right: 2px;
     overflow: auto!important;
-    width: 100px!important;
+    width: 22vw!important;
+    min-width:125px!important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -18,12 +20,7 @@ aside{
 }
 
 .nav-link{
-    padding: 0px!important;
+    padding:0px 0px 2px 5px;
     margin-bottom: 15px!important;
     display: flex!important;
-}
-
-
-.flex-shrink-0{
-    width: 200px!important;
 }
