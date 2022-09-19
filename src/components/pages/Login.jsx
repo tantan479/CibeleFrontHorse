@@ -6,9 +6,11 @@ import Row from 'react-bootstrap/Row'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from 'react-bootstrap/esm/Container'
 import Button from 'react-bootstrap/Button'
-import './login.css'
+import './Login.css'
 import React, { Component } from "react"
 import * as data from '../../data/db.json'
+import Menu from '../layout/Menu'
+import ReactDOM from 'react-dom/client'
 
 const obj1 = data.usuarios
 
@@ -49,6 +51,11 @@ class Login extends Component {
 
         if (a == 1) {
             if (this.state['senha'] == obj1[p1]['senha'] & this.state['professor'] == obj1[p1]['categoria']) {
+                ReactDOM.createRoot(document.getElementById('root')).render(
+                    <React.StrictMode>
+                         <Menu />       {/*          teoria: e se a definição da rota estiver aqui... autenticação        */}
+                    </React.StrictMode>
+                )
             } else {
                 alert("Senha ou tipo de usuario incorretos")
 

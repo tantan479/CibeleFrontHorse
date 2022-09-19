@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Rafael Silva Guimarães",
+      "usuario": "1919203",
+      "senha": "14_848",
+      "categoria": 0
+    }
+  ],
+  "categorias": [
+    {
+      "id": 0,
+      "nome": "Professor"
+    },
+    {
+      "id": 1,
+      "nome": "Aluno"
+    }
+  ]
+}

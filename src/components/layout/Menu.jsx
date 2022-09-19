@@ -4,7 +4,6 @@ import React, { Component } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from '../layout/Sidebar'
 import ReactDOM from 'react-dom/client'
-import Dashboard from '../pages/Dashboard'
 import Relatorio from '../pages/Relatorio'
 
 class Menu extends Component {

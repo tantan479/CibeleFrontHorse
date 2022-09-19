@@ -24,3 +24,12 @@ aside{
     margin-bottom: 15px!important;
     display: flex!important;
 }
+
+.nav-link{
+    color:white!important;
+}
+
+.dropdown-toggle::after{
+    margin-top: 0.7rem!important;
+    margin-left: 0.4rem!important;
+}

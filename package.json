@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react": "^18.0.20",
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "cdbreact": "^1.5.3",
     "html-react-parser": "^3.0.4",
