@@ -39,10 +39,10 @@ class GerarDadost extends Component {
                     <td>
                         {usuario.usuario}
                     </td>
-                    {usuario.categoria == "0" && <td>Professor</td>}
-                    {usuario.categoria == "1" && <td>Aluno</td>}
-                    <td><a role="button">Editar</a></td>
-                    <td><a role="button" onClick={() => this.remove(usuario.id)}>Excluir</a></td>
+                    {usuario.categoria == 0 && <td>Professor</td>}
+                    {usuario.categoria == 1 && <td>Aluno</td>}
+                    <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}}>Editar</a></td>
+                    <td><a role="button" style={{backgroundColor: "red", color: "white"}} onClick={() => this.remove(usuario.id)}>Excluir</a></td>
                 </tr>
             ))}
         </>

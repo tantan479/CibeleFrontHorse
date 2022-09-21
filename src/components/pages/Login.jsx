@@ -50,7 +50,7 @@ class Login extends Component {
         }
 
         if (a == 1) {
-            if (this.state['senha'] == obj1[p1]['senha'] & this.state['professor'] == obj1[p1]['categoria']) {
+            if (this.state['senha'] == obj1[p1]['senha'] & this.state['categoria'] == obj1[p1]['categoria']) {
                 ReactDOM.createRoot(document.getElementById('root')).render(
                     <React.StrictMode>
                          <Menu />       {/*          teoria: e se a definição da rota estiver aqui... autenticação        */}
@@ -97,14 +97,14 @@ class Login extends Component {
                                     <Form.Check
                                         label="Professor"
                                         value="0"
-                                        name="professor"
+                                        name="categoria"
                                         type="radio"
                                         id="prof"
                                         onChange={this.onInputchange} />
                                     <Form.Check
                                         label="Aluno"
                                         value="1"
-                                        name="professor"
+                                        name="categoria"
                                         type="radio"
                                         id="aluno"
                                         onChange={this.onInputchange} />

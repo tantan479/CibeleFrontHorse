@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client'
 import Relatorio from '../pages/Relatorio'
 
 class Menu extends Component {
-    
+
     componentDidMount() {
         document.title = "Dashboard"
         ReactDOM.createRoot(document.getElementById('mainPage')).render(
