@@ -9,7 +9,7 @@ import axios from "axios"
 import GerarDadost from '../layout/Gerardadost'
 
 
-class Cadastro extends Component {
+class UpdateUser extends Component {
 
     constructor() {
         super();
@@ -110,4 +110,4 @@ class Cadastro extends Component {
     }
 }
 
-export default Cadastro
+export default UpdateUser

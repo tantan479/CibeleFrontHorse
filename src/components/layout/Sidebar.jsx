@@ -26,7 +26,7 @@ class Sidebar extends Component {
         document.getElementById("dash").classList.remove('active')
     }
 
-    relUs(){
+    relUs() {
         ReactDOM.createRoot(document.getElementById('mainPage')).render(
             <React.StrictMode>
                 <Relatorio />
@@ -34,8 +34,8 @@ class Sidebar extends Component {
         )
     }
 
-    relDis(){
-        ReactDOMcreateRoot(document.getElementById('mainPage')).render(
+    relDis() {
+        ReactDOM.createRoot(document.getElementById('mainPage')).render(
             <React.StrictMode>
                 <RelDispo />
             </React.StrictMode>
@@ -45,7 +45,9 @@ class Sidebar extends Component {
     render() {
         return (
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar">
-                <span class="fs-4">Bem-vindo</span>
+                <center>
+                    <span class="fs-4">Bem-vindo</span>
+                </center>
                 <hr />
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">

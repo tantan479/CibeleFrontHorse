@@ -2,11 +2,8 @@ import React, { Component } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Table } from "react-bootstrap";
 import ReactDOM from 'react-dom/client'
-import parse from 'html-react-parser';
 import Cadastro from './Cadastro'
 import './Relatorio.css'
-import axios from "axios";
-import Button from 'react-bootstrap/Button'
 import GerarDadost from "../layout/Gerardadost";
 import CadSobre from "./CadSobre"
 
@@ -31,7 +28,7 @@ class Relatorio extends Component {
                 <h1 onClick={this.rendertable}>Relatório de Usuários</h1>
                 <CadSobre />
                 <hr style={{ width: "45vw" }}></hr>
-                <Table variant="dark" wrapperClasses="table-responsive">
+                <Table responsive variant="dark" className="noWrap">
                     <thead>
                         <tr>
                             <th>Id</th>

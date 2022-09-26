@@ -29,3 +29,13 @@ a{
     padding: 1.2px;
     border-radius: 5px!important;
 }
+
+.noWrap{
+    white-space: nowrap;
+}
+
+#mainPage{
+    display: block;
+    overflow-x: auto;
+    margin-right: 19px;
+}

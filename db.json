@@ -1,20 +1,6 @@
 {
   "usuarios": [
     {
-      "id": 0,
-      "nome": "Renato Ribeiro Altoé",
-      "usuario": "20191IMI028",
-      "senha": "12345",
-      "categoria": "1"
-    },
-    {
-      "id": 1,
-      "nome": "Rafael Silva Guimarães",
-      "usuario": "1919203",
-      "senha": "14_848",
-      "categoria": "0"
-    },
-    {
       "nome": "Raphael Figueiredo Secchin",
       "usuario": "20191IMI015",
       "senha": "123",
@@ -30,6 +16,14 @@
     {
       "id": 1,
       "nome": "Aluno"
+    }
+  ],
+  "dispositivos": [
+    {
+      "nome": "Raspberry Pi",
+      "hash": "ASJHXZA12313265486ASDASD",
+      "descricao": "teste",
+      "id": 1
     }
   ]
 }

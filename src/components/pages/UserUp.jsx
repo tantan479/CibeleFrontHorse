@@ -1,19 +1,50 @@
-import React, { Component } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import UpdateUser from './UpdateUser';
+import React from "react"
 
-class UserCad extends Component {
-    componentDidMount() {
-        document.title = "Editar Usuário"
-    }
+function Sobrepor(props) {
+    return (
+        <Modal id="modal"
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            width="auto"
+        >
+            <Modal.Header closeButton id="btn">
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Edição de Usuários
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <UpdateUser />
+            </Modal.Body>
 
-    render() {
-        return ( 
-            <>
-               <h1>Editar Usuário</h1>
-               <hr style={{ width: "45vw" }}></hr>
-            </>
-        );
-    }
+        </Modal>
+    );
 }
 
-export default UserCad
+function UserUp(usuario) {
+
+    this.usuario = usuario
+    const [modalShow, setModalShow] = React.useState(true);
+
+    return (
+
+        <>
+            <Button className='botao' variant="primary" onClick={() => setModalShow(true)}>
+                Cadastrar Usuários
+            </Button>
+
+            <Sobrepor
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </>
+    );
+}
+
+
+export default UserUp

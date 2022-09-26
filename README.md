@@ -22,3 +22,5 @@ Ou. com o projeto em seu estado atual, execute:
 ### `npm run dev`
 
 Não se esqueça de executar o servidor em um terminal separado.
+
+Prefira git clone

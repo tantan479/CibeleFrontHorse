@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Cadastro from './Cadastro';
 import React from "react"
+import CadastroDispositivos from './CadastroDispositivos';
 
-function Sobrepor(props) {
+function Sobreposicao(props) {
   return (
     <Modal id="modal"
       {...props}
@@ -14,27 +14,27 @@ function Sobrepor(props) {
     >
       <Modal.Header closeButton id="btn">
         <Modal.Title id="contained-modal-title-vcenter">
-          Cadastro de Usuários
+          Cadastro de Dispositivos
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Cadastro />
+        <CadastroDispositivos />
       </Modal.Body>
 
     </Modal>
   );
 }
 
-function CadSobre() {
+function CadDispo() {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
       <Button className='botao' variant="primary" onClick={() => setModalShow(true)}>
-        Cadastrar Usuários
+        Cadastrar Dispositivos
       </Button>
 
-      <Sobrepor
+      <Sobreposicao
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
@@ -42,4 +42,4 @@ function CadSobre() {
   );
 }
 
-export default CadSobre
+export default CadDispo

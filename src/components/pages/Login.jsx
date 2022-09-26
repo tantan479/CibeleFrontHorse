@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/esm/Container'
 import Button from 'react-bootstrap/Button'
 import './Login.css'
 import React, { Component } from "react"
-import * as data from '../../data/db.json'
+import * as data from '../../../db.json'
 import Menu from '../layout/Menu'
 import ReactDOM from 'react-dom/client'
 
@@ -66,7 +66,7 @@ class Login extends Component {
     render() {
         return (
             
-            <div className="App" style={{backgroundImage: `url("https://i.imgur.com/uHXWgqG.jpeg")`}}>
+            <div className="App" style={{backgroundImage: `url(/src/assets/logo.jpeg)`}}>
 
                 <>
                     <Header />
