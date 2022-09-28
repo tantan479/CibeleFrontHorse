@@ -18,7 +18,7 @@ function Sobrepor(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Cadastro />
+         <Cadastro />
       </Modal.Body>
 
     </Modal>

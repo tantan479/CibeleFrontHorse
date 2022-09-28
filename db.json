@@ -6,6 +6,20 @@
       "senha": "123",
       "categoria": "1",
       "id": 2
+    },
+    {
+      "nome": "Renato Ribeiro Altoé",
+      "usuario": "20191IMI028",
+      "senha": "123",
+      "categoria": "1",
+      "id": 3
+    },
+    {
+      "nome": "teste",
+      "usuario": "teste",
+      "senha": "12345",
+      "categoria": "0",
+      "id": 4
     }
   ],
   "categorias": [
@@ -24,6 +38,12 @@
       "hash": "ASJHXZA12313265486ASDASD",
       "descricao": "teste",
       "id": 1
+    },
+    {
+      "nome": "Arduino",
+      "hash": "DASD4651324Q5R6S23465Q723S1D",
+      "descricao": "bom",
+      "id": 2
     }
   ]
 }

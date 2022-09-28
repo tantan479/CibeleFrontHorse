@@ -4,20 +4,24 @@ import Row from 'react-bootstrap/Row'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Button from 'react-bootstrap/Button'
 import './Cadastro.css'
-import React, { Component} from "react"
+import React, { Component } from "react"
 import axios from "axios"
 import GerarDadost from '../layout/Gerardadost'
 
 
 class UpdateUser extends Component {
 
-    constructor() {
+    constructor(id) {
+        this.id = id;
         super();
         this.state = {
         };
         this.onInputchange = this.onInputchange.bind(this);
         this.cadastrar = this.cadastrar.bind(this);
+        const resp = axios.get("http://localhost:8000/usuarios/2");
+        this.state = resp.data;
     }
+
 
     onInputchange(event) {
         this.setState({
@@ -52,7 +56,7 @@ class UpdateUser extends Component {
                     </Form.Label>
                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextName">
                         <Col>
-                            <Form.Control name="nome" type="text" placeholder="Digite seu Nome" value={this.state.name} onChange={this.onInputchange} />
+                            <Form.Control name="nome" type="text" placeholder="Digite seu Nome" value={this.state.nome} onChange={this.onInputchange} />
                         </Col>
                     </Form.Group>
 
@@ -65,23 +69,6 @@ class UpdateUser extends Component {
                         </Col>
                     </Form.Group>
 
-                    <Form.Label column sm="6">
-                        Crie uma senha
-                    </Form.Label>
-                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextUser">
-                        <Col>
-                            <Form.Control name="senha" type="password" placeholder="Senha" value={this.state.password} onChange={this.onInputchange} />
-                        </Col>
-                    </Form.Group>
-
-                    <Form.Label column sm="6">
-                        Confirmar Senha
-                    </Form.Label>
-                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextUser">
-                        <Col>
-                            <Form.Control name="senha2" type="password" placeholder="Senha" />
-                        </Col>
-                    </Form.Group>
                     <div className="mb-3 op">
                         <Form.Check
                             label="Professor"
@@ -100,7 +87,7 @@ class UpdateUser extends Component {
                     </div>
                     <>
                         <Button className="botao" variant="primary" size="lg" active onClick={(e) => this.cadastrar(e)}>
-                            Cadastrar
+                           Atualizar
                         </Button>
                     </>
                 </Form>

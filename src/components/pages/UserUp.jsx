@@ -4,7 +4,9 @@ import Modal from 'react-bootstrap/Modal';
 import UpdateUser from './UpdateUser';
 import React from "react"
 
-function Sobrepor(props) {
+
+function Sobrepor(id,props) {
+
     return (
         <Modal id="modal"
             {...props}
@@ -19,26 +21,26 @@ function Sobrepor(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <UpdateUser />
+                <UpdateUser id={id} />
             </Modal.Body>
 
         </Modal>
     );
 }
 
-function UserUp(usuario) {
+function UserUp(id) {
 
-    this.usuario = usuario
     const [modalShow, setModalShow] = React.useState(true);
 
     return (
 
         <>
             <Button className='botao' variant="primary" onClick={() => setModalShow(true)}>
-                Cadastrar Usuários
+                Editar
             </Button>
 
             <Sobrepor
+                id={id}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />

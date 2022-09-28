@@ -3,6 +3,7 @@ import axios from "axios";
 import './Gerardadost.module.css'
 import UserUp from '../pages/UserUp'
 import Button from 'react-bootstrap/Button'
+import UpdateUser from '../pages/UpdateUser'
 
 var data
 
@@ -28,11 +29,12 @@ class GerarDadost extends Component {
     async update(id) {
 
         this.id = id
-        var url = "http://localhost:8000/usuarios/"
-        url += id
-        const resp = await axios.get(url)
-        console.log(resp.data)
-        // await axios.put(url, user)
+        UserUp(id)
+        // url += id
+        // const resp = await axios.get(url)
+        // console.log(resp.data)
+        // // await axios.put(url, user)
+
     }
 
     render() {
@@ -54,8 +56,8 @@ class GerarDadost extends Component {
                         </td>
                         {usuario.categoria == 0 && <td>Professor</td>}
                         {usuario.categoria == 1 && <td>Aluno</td>}
-                        {/* <td><UserUp usuarios/></td> */}
-                        <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update}>Editar</a></td>
+                        <td><UserUp id={usuario.id}/></td>
+                        {/* <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update(usuario.id)}>Editar</a></td> */}
                         <td><a role="button" style={{ backgroundColor: "red", color: "white" }} onClick={() => this.remove(usuario.id)}>Excluir</a></td>
                     </tr>
                 ))}

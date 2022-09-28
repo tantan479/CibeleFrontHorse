@@ -27,7 +27,7 @@ class Cadastro extends Component {
 
     async cadastrar(e) {
 
-        let url = "http://localhost:8000/usuarios/0"
+        let url = "http://localhost:8000/usuarios/"
         let form = this.state;
         console.log(form);
         try {
@@ -68,7 +68,7 @@ class Cadastro extends Component {
                     <Form.Label column sm="6">
                         Crie uma senha
                     </Form.Label>
-                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextUser">
+                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextSenha">
                         <Col>
                             <Form.Control name="senha" type="password" placeholder="Senha" value={this.state.password} onChange={this.onInputchange} />
                         </Col>
@@ -77,7 +77,7 @@ class Cadastro extends Component {
                     <Form.Label column sm="6">
                         Confirmar Senha
                     </Form.Label>
-                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextUser">
+                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextSenha2">
                         <Col>
                             <Form.Control name="senha2" type="password" placeholder="Senha" />
                         </Col>
