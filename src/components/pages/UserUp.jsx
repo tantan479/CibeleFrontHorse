@@ -3,12 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import UpdateUser from './UpdateUser';
 import React from "react"
+import { Document } from 'domhandler';
 
+var idgeral;
 
-function Sobrepor(id,props) {
+function Sobrepor(props){
 
     return (
-        <Modal id="modal"
+        <Modal
             {...props}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
@@ -21,32 +23,40 @@ function Sobrepor(id,props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <UpdateUser id={id} />
+                <UpdateUser id={idgeral} />
             </Modal.Body>
 
         </Modal>
     );
 }
 
-function UserUp(id) {
+function PegarId() {
+    // console.log(event.srcElement.id)
+    idgeral = event.srcElement.id
+}
 
-    const [modalShow, setModalShow] = React.useState(true);
+function UserUp(id1) {
+
+    const [modalShow, setModalShow] = React.useState(false);
+
+
 
     return (
 
         <>
-            <Button className='botao' variant="primary" onClick={() => setModalShow(true)}>
+            <Button className='botao' id={id1.id1} variant="primary" onClick={() => {
+                setModalShow(true);
+                PegarId();
+            }}>
                 Editar
             </Button>
 
             <Sobrepor
-                id={id}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
         </>
     );
 }
-
 
 export default UserUp

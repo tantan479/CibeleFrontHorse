@@ -1,10 +1,10 @@
 {
   "usuarios": [
     {
+      "categoria": "0",
       "nome": "Raphael Figueiredo Secchin",
       "usuario": "20191IMI015",
       "senha": "123",
-      "categoria": "1",
       "id": 2
     },
     {
@@ -16,10 +16,9 @@
     },
     {
       "nome": "teste",
-      "usuario": "teste",
-      "senha": "12345",
-      "categoria": "0",
-      "id": 4
+      "usuario": "123451",
+      "categoria": "1",
+      "id": 5
     }
   ],
   "categorias": [

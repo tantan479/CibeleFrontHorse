@@ -7,19 +7,40 @@ import './Cadastro.css'
 import React, { Component } from "react"
 import axios from "axios"
 import GerarDadost from '../layout/Gerardadost'
+import Sobrepor from './UserUp'
 
 
 class UpdateUser extends Component {
 
     constructor(id) {
-        this.id = id;
         super();
         this.state = {
         };
         this.onInputchange = this.onInputchange.bind(this);
         this.cadastrar = this.cadastrar.bind(this);
-        const resp = axios.get("http://localhost:8000/usuarios/2");
-        this.state = resp.data;
+        this.GetDados(id)
+    }
+
+    async GetDados(id){
+
+        var url = "http://localhost:8000/usuarios/"
+        url += id.id;
+
+        console.log(url)
+
+        const resp = await axios.get(url);
+        this.setState(resp.data);
+
+        var categoria;
+        var seletor = resp.data.categoria;
+
+        if (seletor == "0") {
+            categoria = '#professor'
+        }else if(seletor == "1"){
+            categoria = '#aluno'
+        }
+
+        document.querySelector(categoria).click()
     }
 
 
@@ -29,14 +50,17 @@ class UpdateUser extends Component {
         });
     }
 
-    async cadastrar(e) {
+    async cadastrar() {
 
-        let url = "http://localhost:8000/usuarios/0"
+        let url = "http://localhost:8000/usuarios/"
         let form = this.state;
+
+        url += form.id;
         console.log(form);
+
         try {
-            await axios.post(url, form)
-            alert("Usuário cadastrado")
+            await axios.put(url, form)
+            alert("Usuário atualizado")
 
 
         } catch (error) {
@@ -48,6 +72,7 @@ class UpdateUser extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <>
                 <Form className='teste'>
@@ -56,7 +81,7 @@ class UpdateUser extends Component {
                     </Form.Label>
                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextName">
                         <Col>
-                            <Form.Control name="nome" type="text" placeholder="Digite seu Nome" value={this.state.nome} onChange={this.onInputchange} />
+                            <Form.Control name="nome" type="text" placeholder="Digite o Nome" value={this.state.nome} onChange={this.onInputchange} />
                         </Col>
                     </Form.Group>
 
@@ -65,7 +90,7 @@ class UpdateUser extends Component {
                     </Form.Label>
                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextUser">
                         <Col>
-                            <Form.Control name="usuario" type="text" placeholder="Digite seu Usuário" value={this.state.user} onChange={this.onInputchange} />
+                            <Form.Control name="usuario" type="text" placeholder="Digite seu Usuário" value={this.state.usuario} onChange={this.onInputchange} />
                         </Col>
                     </Form.Group>
 
@@ -86,7 +111,7 @@ class UpdateUser extends Component {
                             onChange={this.onInputchange} />
                     </div>
                     <>
-                        <Button className="botao" variant="primary" size="lg" active onClick={(e) => this.cadastrar(e)}>
+                        <Button className="botao" variant="primary" size="lg" active onClick={() => this.cadastrar()}>
                            Atualizar
                         </Button>
                     </>
