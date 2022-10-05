@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios";
 import './Gerardadost.module.css'
+import DispoUp from "../pages/DispoUp";
 
 var data
 
@@ -23,12 +24,11 @@ class GerardadosDispo extends Component {
         this.forceUpdate(GerardadosDispo)
     }
 
-    // async update(id)
-    // {
-    //     this.id = id
-    //     var url = "http://localhost:8000/dispositivos/"
-    //     url += id
-    // }
+    async update(id) {
+
+        this.id = id
+        DispoUp(id)
+    }
 
     render() {
 
@@ -50,7 +50,8 @@ class GerardadosDispo extends Component {
                     <td>
                         {dispositivos.descricao}
                     </td>
-                    <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update(dispositivos.id)}>Editar</a></td>
+                    <td><DispoUp id1={dispositivos.id}/></td>
+                    {/* <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update(dispositivos.id)}>Editar</a></td> */}
                     <td><a role="button" style={{backgroundColor: "red", color: "white"}} onClick={() => this.remove(dispositivos.id)}>Excluir</a></td>
                 </tr>
             ))}

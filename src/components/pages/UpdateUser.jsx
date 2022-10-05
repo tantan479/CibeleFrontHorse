@@ -35,7 +35,7 @@ class UpdateUser extends Component {
         var seletor = resp.data.categoria;
 
         if (seletor == "0") {
-            categoria = '#professor'
+            categoria = '#prof'
         }else if(seletor == "1"){
             categoria = '#aluno'
         }
@@ -72,7 +72,6 @@ class UpdateUser extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <>
                 <Form className='teste'>

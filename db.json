@@ -8,10 +8,10 @@
       "id": 2
     },
     {
+      "categoria": "0",
       "nome": "Renato Ribeiro Altoé",
       "usuario": "20191IMI028",
       "senha": "123",
-      "categoria": "1",
       "id": 3
     },
     {
@@ -33,15 +33,15 @@
   ],
   "dispositivos": [
     {
-      "nome": "Raspberry Pi",
-      "hash": "ASJHXZA12313265486ASDASD",
+      "nome": "Raspberry pi",
+      "hash": "ASHDAKSDHGFGHSJFBSADJHFGASJH",
       "descricao": "teste",
       "id": 1
     },
     {
       "nome": "Arduino",
-      "hash": "DASD4651324Q5R6S23465Q723S1D",
-      "descricao": "bom",
+      "hash": "DASD4651324Q5R6S23465Q723S1DA",
+      "descricao": "Bom",
       "id": 2
     }
   ]
