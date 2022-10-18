@@ -1,24 +1,11 @@
 {
   "usuarios": [
     {
-      "categoria": "0",
       "nome": "Raphael Figueiredo Secchin",
       "usuario": "20191IMI015",
       "senha": "123",
-      "id": 2
-    },
-    {
       "categoria": "0",
-      "nome": "Renato Ribeiro Altoé",
-      "usuario": "20191IMI028",
-      "senha": "123",
-      "id": 3
-    },
-    {
-      "nome": "teste",
-      "usuario": "123451",
-      "categoria": "1",
-      "id": 5
+      "id": 4
     }
   ],
   "categorias": [
@@ -35,7 +22,7 @@
     {
       "nome": "Raspberry pi",
       "hash": "ASHDAKSDHGFGHSJFBSADJHFGASJH",
-      "descricao": "teste",
+      "descricao": "testes",
       "id": 1
     },
     {

@@ -26,7 +26,7 @@ class RelDispo extends Component {
                 <Table responsive variant="dark" className="noWrap">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>#</th>
                             <th>Nome</th>
                             <th>Hash</th>
                             <th>Descrição</th>

@@ -30,17 +30,23 @@ class Cadastro extends Component {
         let url = "http://localhost:8000/usuarios/"
         let form = this.state;
         console.log(form);
-        try {
-            await axios.post(url, form)
-            alert("Usuário cadastrado")
-
-
-        } catch (error) {
-            console.log(error)
+        
+        if(form.senha != form.senha2){
+            alert("Use senhas iguais")
+        }else{
+            try {
+                await axios.post(url, form)
+                alert("Usuário cadastrado")
+    
+    
+            } catch (error) {
+                console.log(error)
+            }
+    
+            document.querySelector('.btn-close').click()
+            this.forceUpdate(GerarDadost)
         }
-
-        document.querySelector('.btn-close').click()
-        this.forceUpdate(GerarDadost)
+        
     }
 
     render() {
@@ -79,7 +85,8 @@ class Cadastro extends Component {
                     </Form.Label>
                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextSenha2">
                         <Col>
-                            <Form.Control name="senha2" type="password" placeholder="Senha" />
+                            <Form.Control name="senha2" type="password" placeholder="Senha"
+                            value={this.state.password2} onChange={this.onInputchange} />
                         </Col>
                     </Form.Group>
                     <div className="mb-3 op">

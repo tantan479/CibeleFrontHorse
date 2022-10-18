@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from 'react-bootstrap/esm/Container'
 import Button from 'react-bootstrap/Button'
-import './Login.css'
+import './login.css'
 import React, { Component } from "react"
 import * as data from '../../../db.json'
 import Menu from '../layout/Menu'

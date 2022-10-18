@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import axios from "axios";
 import './Gerardadost.module.css'
 import DispoUp from "../pages/DispoUp";
+import Button from 'react-bootstrap/Button'
 
 var data
 
@@ -33,13 +34,13 @@ class GerardadosDispo extends Component {
     render() {
 
         const { dispositivos } = this.state
-
+        let i = 1;
         return (
         <>
             {dispositivos.map(dispositivos => (
                 <tr key={dispositivos.id}>
                     <td>
-                        {dispositivos.id}
+                        {i++}
                     </td>
                     <td>
                         {dispositivos.nome}
@@ -51,8 +52,7 @@ class GerardadosDispo extends Component {
                         {dispositivos.descricao}
                     </td>
                     <td><DispoUp id1={dispositivos.id}/></td>
-                    {/* <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update(dispositivos.id)}>Editar</a></td> */}
-                    <td><a role="button" style={{backgroundColor: "red", color: "white"}} onClick={() => this.remove(dispositivos.id)}>Excluir</a></td>
+                    <td><Button className='botao2' onClick={() => this.remove(dispositivos.id)}>Excluir</Button></td>
                 </tr>
             ))}
         </>

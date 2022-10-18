@@ -5,7 +5,7 @@
     left: 0!important;
     display: flex!important;
     flex-direction:column!important;
-    height: calc(100vh - 107px)!important;
+    min-height: calc(100vh - 107px)!important;
     justify-content: left!important;
     text-align: left!important;
     padding-right: 2px;

@@ -31,7 +31,7 @@ class Relatorio extends Component {
                 <Table responsive variant="dark" className="noWrap">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>#</th>
                             <th>Nome</th>
                             <th>Usuário</th>
                             <th>Categoria</th>

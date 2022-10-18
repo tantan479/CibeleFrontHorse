@@ -6,8 +6,10 @@ import Button from 'react-bootstrap/Button'
 import './Cadastro.css'
 import React, { Component } from "react"
 import axios from "axios"
-import GerarDadost from '../layout/Gerardadost'
+import Gerardadost from '../layout/Gerardadost'
+import Dashboard from './Dashboard'
 import Sobrepor from './UserUp'
+import Menu from '../layout/Menu'
 
 
 class UpdateUser extends Component {
@@ -68,7 +70,7 @@ class UpdateUser extends Component {
         }
 
         document.querySelector('.btn-close').click()
-        this.forceUpdate(GerarDadost)
+        this.forceUpdate(Menu)
     }
 
     render() {

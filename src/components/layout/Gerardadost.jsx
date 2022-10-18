@@ -42,12 +42,13 @@ class GerarDadost extends Component {
 
         const { usuarios } = this.state
 
+        let i = 1;
         return (
             <>
                 {usuarios.map(usuario => (
                     <tr key={usuario.id}>
                         <td>
-                            {usuario.id}
+                            {i++}
                         </td>
                         <td>
                             {usuario.nome}
@@ -58,8 +59,7 @@ class GerarDadost extends Component {
                         {usuario.categoria == 0 && <td>Professor</td>}
                         {usuario.categoria == 1 && <td>Aluno</td>}
                         <td><UserUp id1={usuario.id}/></td>
-                        {/* <td><a role="button" style={{backgroundColor: "#ea8f01", color: "white"}} onClick={() => this.update(usuario.id)}>Editar</a></td> */}
-                        <td><a role="button" style={{ backgroundColor: "red", color: "white" }} onClick={() => this.remove(usuario.id)}>Excluir</a></td>
+                        <td><Button type="button" className='botao2' onClick={() => this.remove(usuario.id)}>Excluir</Button></td>
                     </tr>
                 ))}
             </>
